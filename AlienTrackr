@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'optparse'
+
+command = ARGV[0]
+date = ARGV[1]
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: Alientrackr [command] [options]"
+
+  opts.on(":time [TIME]", "The time") do |time|
+    options[:time] = time
+  end
+
+  opts.on(":location [LOCATION]", "The location") do |location|
+    options[:location] = location
+  end
+end.parse!
+
+if date.nil? or date.empty?
+  puts "Your sighting must include a date."
+  exit
+end
+
+missing_parameters = []
+missing_parameters << "time" unless options[:time]
+missing_parameters << "total location" unless options[:location]
+unless missing_parameters.empty?
+  puts "You must provide the #{missing_parameters.join(" and ")} of the sighting you are reporting."
+  exit
+end
+
+puts "Your sighting has been recorded!"

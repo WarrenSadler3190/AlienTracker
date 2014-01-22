@@ -10,7 +10,8 @@ made available to you with the wonders of Ruby Programming and SQLite Databasing
 
 ##Feature List
   
-  * You can enter in a New Sighting: Date, Time, Duration and Location! (fancy huh?)
+  * You can enter in a New Sighting: Date, Time and Location! (fancy huh?)
+  * Find which night of the week you're most likely to spot an Alien!
   * Compare your states Alien Activity with others! (Let's get spooky!)
   * Compare Crime Rates with Supernatural Activity in your area, see the correlation! (The news is frightening out of this     world!)
 
